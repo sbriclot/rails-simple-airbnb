@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>All our flats</h1>
+  <p>There's <strong><%= @flats.count %></strong> flats available</p>
+  <div class="cards">
+    <% @flats.each do |flat| %>
+      <div class="card">
+        <%= image_tag flat.picture rescue image_tag 'missing.jpg' %>
+        <div class="card-body">
+          <h3><%= flat.name %></h3>
+          <p><%= flat.address %></p>
+          <div class="flat-icons">
+            <div><span class="fas fa-user-friends"></span> <%= flat.number_of_guests %></div>
+            <div><span class="fas fa-euro-sign"></span> <%= flat.price_per_night %></div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <%= link_to "More info", flat_path(flat.id), class: "card-link text-primary" %>
+          <%= link_to "Edit", edit_flat_path(flat.id), class: "card-link text-warning" %>
+          <%= link_to "Delete", flat_path(flat.id), method: :delete, data: { confirm: "Are you sure ?" }, class: "card-link text-danger" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

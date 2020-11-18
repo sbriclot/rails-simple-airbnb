@@ -1,0 +1,106 @@
+// Import page-specific CSS files here.
+@import "home";
+
+// common
+.navbar {
+  border-bottom: 1px solid lightgray;
+}
+
+.nav-title {
+  color: gray;
+  font-size: 32px;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.nav-action {
+  display: flex;
+  align-items: center;
+  a {
+    margin-left: 5px;
+  }
+}
+
+.container {
+  margin-top: 25px;
+}
+
+// index
+.cards {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 25px;
+  row-gap: 25px;
+}
+
+.card h3{
+  font-weight: bold;
+}
+
+.card img {
+  width: 100%;
+  background-size: cover;
+}
+
+.flat-icons {
+  display: flex;
+  font-size: 16px;
+}
+
+.flat-icons div {
+  margin-right: 15px;
+}
+
+// new
+.add-flat {
+  background-color: #CCCCCC;
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+// show
+.banner {
+  width: 100%;
+  height: 40vh;
+  background-position: center;
+}
+
+.show-body {
+  margin-top: -75px;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+.map {
+  height: 40vh;
+}
+
+.show-details {
+  display: inline-grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 25px;
+}
+
+.flat-details-section {
+  background-color: #EEEEEE;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.share {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  .fab, .fas {
+    font-size: 32px;
+  }
+}

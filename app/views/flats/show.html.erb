@@ -1,0 +1,56 @@
+<div class="banner" style='background-image: url("<%= @flat.picture %>")'>
+</div>
+
+<div class="container show-body">
+  <div class="show-details">
+    <div class="flat-details">
+      <div class="flat-details-section">
+        <h1><%= @flat.name %></h1>
+        <p><%= @flat.address %></p>
+      </div>
+      <div class="flat-details-section">
+        <h2>A bit more about this flat</h2>
+        <p><%= @flat.description %></p>
+      </div>
+      <div class="flat-details-section map">
+      </div>
+    </div>
+
+    <div class="book-details">
+      <div class="flat-details-section">
+        <h2>Book this place!</h2>
+        <form action="#" class="form-inline">
+          <div class="input-group w-100 mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">From</div>
+           </div>
+           <input type="text" class="form-control" placeholder="12/07/2021">
+          </div>
+          <div class="input-group w-100 mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">To</div>
+           </div>
+           <input type="text" class="form-control" placeholder="19/07/2021">
+          </div>
+          <input type="submit" value="Book" class="btn btn-success w-100">
+        </form>
+      </div>
+      <div class="flat-details-section">
+        <h2>Details</h2>
+        <div class="flat-icons">
+          <div><span class="fas fa-user-friends"></span> <%= @flat.number_of_guests %></div>
+          <div><span class="fas fa-euro-sign"></span> <%= @flat.price_per_night %></div>
+        </div>
+      </div>
+      <div class="flat-details-section share">
+        Share
+        <div>
+          <span class="fab fa-facebook-square"></span>
+          <span class="fab fa-twitter-square"></span>
+          <span class="fab fa-pinterest-square"></span>
+          <span class="fas fa-envelope-square"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
